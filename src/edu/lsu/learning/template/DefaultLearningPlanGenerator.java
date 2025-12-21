@@ -3,17 +3,17 @@ package edu.lsu.learning.template;
 public class DefaultLearningPlanGenerator extends AbstractLearningPlanGenerator {
 
     @Override
-    protected void analyzeGoal(String goal) {
-        System.out.println("分析学习目标：" + goal);
+    protected String analyzeGoal(String goal) {
+        return ">>> [系统分析] 正在解析学习目标：“" + goal + "”... 分析完毕。";
     }
 
     @Override
-    protected void assessLevel() {
-        System.out.println("评估学习者当前基础水平。");
+    protected String assessLevel() {
+        return ">>> [系统评估] 根据历史数据，评估学习者基础为：待提升。";
     }
 
     @Override
-    protected void outputPlan() {
-        System.out.println("学习计划生成完成。");
+    protected String outputPlan() {
+        return ">>> [系统归档] 计划生成完毕，已存入数据库。";
     }
 }
